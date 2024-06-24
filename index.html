@@ -4,7 +4,165 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhandhaa.com</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Reset some default browser styles */
+        body, h1, h2, h3, p, ul, li, a, input, button {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            scroll-behavior: smooth;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background: #f7f7f7;
+            border-bottom: 1px solid #ddd;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .navbar .logo h1 {
+            font-size: 24px;
+        }
+
+        .navbar nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        .navbar nav ul li {
+            margin-left: 20px;
+        }
+
+        .navbar nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .navbar nav ul li a:hover,
+        .navbar nav ul li .btn-post-ad {
+            color: #d9534f;
+        }
+
+        .navbar nav ul li .btn-post-ad {
+            background: #d9534f;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+
+        .hero {
+            background: url('https://images.pexels.com/photos/159490/yale-university-landscape-universities-schools-159490.jpeg?auto=compress&cs=tinysrgb&w=800') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero h2 {
+            font-size: 36px;
+            margin-bottom: 70px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .hero h3 {
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .search-bar input {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 9px;
+            margin-right: 10px;
+        }
+
+        .search-bar button {
+            padding: 0.8rem 4rem;
+            border: none;
+            background: #d9534f;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .categories {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .category {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .category img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .category p {
+            margin-top: 10px;
+        }
+
+        .about-us {
+            padding: 50px 20px;
+            background: #f7f7f7;
+            text-align: center;
+        }
+
+        .about-us h2 {
+            font-size: 33px;
+            margin-bottom: 20px;
+        }
+
+        .about-us p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -17,8 +175,8 @@
                     <li><a href="#home">Home</a></li>
                     <li><a href="#why-Dhandhaa.com">Why Dhandhaa.com</a></li>
                     <li><a href="#how-it-works">How It Works?</a></li>
-                    <li><a href="#login"class="btn-post-ad">Login</a></li>
-                    <li><a href="#sign-up"class="btn-post-ad">Sign Up</a></li>
+                    <li><a href="#login" class="btn-post-ad">Login</a></li>
+                    <li><a href="#sign-up" class="btn-post-ad">Sign Up</a></li>
                     <li><a href="#post-ad" class="btn-post-ad">JOIN US</a></li>
                 </ul>
             </nav>
@@ -28,8 +186,7 @@
     <section id="home" class="hero">
         <div class="hero-content">
             <h2>Buy and Sell Used Products Within Your College Campus</h2>
-           
-           <p> <h3>Find Used Items Near You</h3></p>
+            <h3>Find Used Items Near You</h3>
             <div class="search-bar">
                 <input type="text" placeholder="Select City">
                 <input type="text" placeholder="Quick Search">
@@ -38,18 +195,15 @@
             <div class="categories">
                 <div class="category">
                     <img src="https://cdn-icons-png.flaticon.com/128/6062/6062646.png">
-                    <p> Electronics</p>
+                    <p>Electronics</p>
                 </div>
                 <div class="category">
                     <img src="https://cdn-icons-png.flaticon.com/128/3771/3771417.png" alt="Computers & Laptops">
                     <p>Books & Notes</p>
                 </div>
                 <div class="category">
-                    <img src="https://cdn-icons-png.flaticon.com/128/6833/6833470.png" alt="others">
+                    <img src="https://cdn-icons-png.flaticon.com/128/6833/6833470.png" alt="Others">
                     <p>Others</p>
-   
-                    
-  
                 </div>
             </div>
         </div>
@@ -57,9 +211,4 @@
 
     <section id="about" class="about-us">
         <h2>About Us</h2>
-        <p>Dhandhaa.com is a platform dedicated to helping students buy and sell used products within their college campus. Our goal is to create a community where students can find affordable and convenient solutions for their everyday needs.</p>
-    </section>
-
-    <script src="script.js"></script>
-</body>
-</html>
+        <p>Dhandhaa.com is a platform dedicated to helping students buy and sell used products within their college campus
